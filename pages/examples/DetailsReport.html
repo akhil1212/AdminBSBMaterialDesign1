@@ -1,0 +1,818 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>PROACCELERATE</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../../Favicon.jpg" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="../../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="../../plugins/node-waves/waves.css" rel="stylesheet" />
+
+    <!-- Dropzone Css -->
+    <link href="../../plugins/dropzone/dropzone.css" rel="stylesheet">
+
+    <!-- Animation Css -->
+    <link href="../../plugins/animate-css/animate.css" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="../../css/style.css" rel="stylesheet">
+
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="../../css/themes/all-themes.css" rel="stylesheet" />
+
+
+   
+
+    <style>
+        .container {
+            margin: 10px auto;
+        }
+
+        body {
+            background-color: #fafafa;
+            font-family: 'Open Sans';
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var DetailReport = new Morris.Bar({
+                element: 'DetailReport',
+                horizontal: true,
+                data: [
+                    { labels: "MR1M ", x: 1, a: 2 },
+                    { labels: "Maintenance/Decommissioning", x: 2, a: 5 },
+                    { labels: "Global Trade", x: 3, a: 25 },
+                    { labels: "Condition Contract", x: 4, a: 71 },
+                    { labels: "Data Model", x: 5, a: 10 },
+                    { labels: "ATP Transition", x: 6, a: 7 },
+                    { labels: "Extension Information", x: 7, a: 3 },
+                    { labels: "Logistics_PP-MRP", x: 8, a: 67 },
+                    { labels: "Operational Data ", x: 9, a: 32 },
+                    { labels: "Cross-system", x: 10, a: 25 },
+                    { labels: "Asset Accounting", x: 11, a: 12 },
+                    { labels: "Custom Fields", x: 12, a: 34 },
+                    { labels: "Retail Labeling", x: 13, a: 47 },
+                    { labels: "Cost Elements & ALE ", x: 14, a: 21 },
+                    { labels: "General Ledger", x: 15, a: 14 },
+                    { labels: "RFC", x: 16, a: 15 },
+                ],
+                xkey: 'labels',
+                ykeys: ['a'],
+                labels: ['x'],
+                resize: true,
+                stacked: true,
+                hideHover: 'auto',
+            });
+        }
+    </script>
+</head>
+
+<body class="theme-black">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="../../Dashboard.html">
+                    <img src="../../images/logo.png" style="width:200px;height:50px;vertical-align:middle;margin-top:-15px !important;" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Call Search -->
+                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                    <!-- #END# Call Search -->
+                    <!-- Notifications -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            <i class="material-icons">notifications</i>
+                            <span class="label-count">7</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">NOTIFICATIONS</li>
+                            <li class="body">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-light-green">
+                                                <i class="material-icons">person_add</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>12 new members joined</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 14 mins ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-cyan">
+                                                <i class="material-icons">add_shopping_cart</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>4 sales made</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 22 mins ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-red">
+                                                <i class="material-icons">delete_forever</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4><b>Nancy Doe</b> deleted account</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 3 hours ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-orange">
+                                                <i class="material-icons">mode_edit</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4><b>Nancy</b> changed name</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 2 hours ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-blue-grey">
+                                                <i class="material-icons">comment</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4><b>John</b> commented your post</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 4 hours ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-light-green">
+                                                <i class="material-icons">cached</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4><b>John</b> updated status</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 3 hours ago
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-purple">
+                                                <i class="material-icons">settings</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>Settings updated</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> Yesterday
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer">
+                                <a href="javascript:void(0);">View All Notifications</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- #END# Notifications -->
+                    <!-- Tasks -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            <i class="material-icons">flag</i>
+                            <span class="label-count">9</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">TASKS</li>
+                            <li class="body">
+                                <ul class="menu tasks">
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <h4>
+                                                Footer display issue
+                                                <small>32%</small>
+                                            </h4>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-pink" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 32%">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <h4>
+                                                Make new buttons
+                                                <small>45%</small>
+                                            </h4>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-cyan" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <h4>
+                                                Create new dashboard
+                                                <small>54%</small>
+                                            </h4>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-teal" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 54%">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <h4>
+                                                Solve transition issue
+                                                <small>65%</small>
+                                            </h4>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-orange" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <h4>
+                                                Answer GitHub questions
+                                                <small>92%</small>
+                                            </h4>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-purple" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 92%">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer">
+                                <a href="javascript:void(0);">View All Tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- #END# Tasks -->
+                    <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <!--<div class="user-info">
+                <div class="image">
+                    <img src="../../images/user.png" width="48" height="48" alt="User" />
+                </div>
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vikash</div>
+                    <div class="email">vikash@promantusinc.com</div>
+                    <div class="btn-group user-helper-dropdown">
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>-->
+            <!-- #User Info -->
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="header" style="font-size: 14px;background-color:black !important;color:white;">S4 HANA ACCELARATOR</li>
+                    <li class="active">
+                        <a href="../../Dashboard.html">
+                            <i class="material-icons">home</i>
+                            <span>DashBoard</span>
+                        </a>
+                    </li>
+
+                    <li>
+
+                        <a href="javascript:void(0);" class="menu-toggle toggled waves-effect waves-block">
+                            <i class="material-icons" style="color:black;">widgets</i>
+                            <span style="font-weight: bold;color:black;">Assessment</span>
+                        </a>
+
+                        <ul class="ml-menu">
+
+                            <li>
+                                <a href="../../pages/examples/CreateAnalysis.html" class=" waves-effect waves-block">Create Analysis </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    Readiness Report
+                                </a>
+                                <ul class="ml-menu" style="font-size: smaller;margin-left: -25px !important;">
+                                    <li>
+                                        <a href="../../pages/examples/PreMigration.html">
+                                            Readiness Report
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../../pages/examples/Relevant.html?T=Relevant%20(Non%20-%20Strategic)" class=" waves-effect waves-block">
+                                            Simplification Report
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../../pages/examples/DetailsReport.html?T=175200" class=" waves-effect waves-block">
+                                            Custom Code Analysis
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            <li>
+                                <a class="menu-toggle">Compatability Report</a>
+                                <ul class="ml-menu" style="font-size: smaller;margin-left: -25px !important;">
+                                    <li>
+                                        <a href="../../pages/examples/AddOnCompatability.html" class=" waves-effect waves-block">
+                                            Add on Compatability Check
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../../pages/examples/ABAPTest.html" class=" waves-effect waves-block">
+                                            ABAP Test Cock Pit
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <a href="/preconversion-tasks.html" class="toggled waves-effect waves-block">
+                            <i class="material-icons" style="color:black;">screen_share</i>
+                            <span style="color:black;">Pre Conversion</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/migration-tasks.html" class="toggled waves-effect waves-block">
+                            <i class="material-icons" style="color:black;">loop</i>
+                            <span style="color:black;">Migration</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/postconversion-tasks.html" class="toggled waves-effect waves-block">
+                            <i class="material-icons" style="color:black;">add_alert</i>
+                            <span style="color:black;">Post Conversion</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/validation-tasks.html" class="toggled waves-effect waves-block">
+                            <i class="material-icons" style="color:black;">work</i>
+                            <span style="color:black;">Validation</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- #Menu -->
+            <!-- Footer -->
+            <div class="legal">
+                <div class="copyright">
+                    &copy; 2016 - 2017 <a href="javascript:void(0);">Promantus Inc - All Rights Reserved</a>.
+                </div>
+                <div class="version">
+                    <b>Version: </b> 1.0.5
+                </div>
+            </div>
+            <!-- #Footer -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <aside id="rightsidebar" class="right-sidebar">
+            <ul class="nav nav-tabs tab-nav-right" role="tablist">
+                <li role="presentation" class="active"><a href="#skins" data-toggle="tab">SKINS</a></li>
+                <li role="presentation"><a href="#settings" data-toggle="tab">SETTINGS</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active in active" id="skins">
+                    <ul class="demo-choose-skin">
+                        <li data-theme="red" class="active">
+                            <div class="red"></div>
+                            <span>Red</span>
+                        </li>
+                        <li data-theme="pink">
+                            <div class="pink"></div>
+                            <span>Pink</span>
+                        </li>
+                        <li data-theme="purple">
+                            <div class="purple"></div>
+                            <span>Purple</span>
+                        </li>
+                        <li data-theme="deep-purple">
+                            <div class="deep-purple"></div>
+                            <span>Deep Purple</span>
+                        </li>
+                        <li data-theme="indigo">
+                            <div class="indigo"></div>
+                            <span>Indigo</span>
+                        </li>
+                        <li data-theme="blue">
+                            <div class="blue"></div>
+                            <span>Blue</span>
+                        </li>
+                        <li data-theme="light-blue">
+                            <div class="light-blue"></div>
+                            <span>Light Blue</span>
+                        </li>
+                        <li data-theme="cyan">
+                            <div class="cyan"></div>
+                            <span>Cyan</span>
+                        </li>
+                        <li data-theme="teal">
+                            <div class="teal"></div>
+                            <span>Teal</span>
+                        </li>
+                        <li data-theme="green">
+                            <div class="green"></div>
+                            <span>Green</span>
+                        </li>
+                        <li data-theme="light-green">
+                            <div class="light-green"></div>
+                            <span>Light Green</span>
+                        </li>
+                        <li data-theme="lime">
+                            <div class="lime"></div>
+                            <span>Lime</span>
+                        </li>
+                        <li data-theme="yellow">
+                            <div class="yellow"></div>
+                            <span>Yellow</span>
+                        </li>
+                        <li data-theme="amber">
+                            <div class="amber"></div>
+                            <span>Amber</span>
+                        </li>
+                        <li data-theme="orange">
+                            <div class="orange"></div>
+                            <span>Orange</span>
+                        </li>
+                        <li data-theme="deep-orange">
+                            <div class="deep-orange"></div>
+                            <span>Deep Orange</span>
+                        </li>
+                        <li data-theme="brown">
+                            <div class="brown"></div>
+                            <span>Brown</span>
+                        </li>
+                        <li data-theme="grey">
+                            <div class="grey"></div>
+                            <span>Grey</span>
+                        </li>
+                        <li data-theme="blue-grey">
+                            <div class="blue-grey"></div>
+                            <span>Blue Grey</span>
+                        </li>
+                        <li data-theme="black">
+                            <div class="black"></div>
+                            <span>Black</span>
+                        </li>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="settings">
+                    <div class="demo-settings">
+                        <p>GENERAL SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Report Panel Usage</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Email Redirect</span>
+                                <div class="switch">
+                                    <label><input type="checkbox"><span class="lever"></span></label>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>SYSTEM SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Notifications</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Auto Updates</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>ACCOUNT SETTINGS</p>
+                        <ul class="setting-list">
+                            <li>
+                                <span>Offline</span>
+                                <div class="switch">
+                                    <label><input type="checkbox"><span class="lever"></span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Location Permission</span>
+                                <div class="switch">
+                                    <label><input type="checkbox" checked><span class="lever"></span></label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- #END# Right Sidebar -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+
+                <div class="row clearfix">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="card">
+                                <div class="header" style="margin-bottom: 0px !important;">
+                                        <h2><b>Custom Code</b></h2>
+                                    </div>
+                            <div class="body">
+                                <form class="form-horizontal">
+
+                                    <div class="row clearfix">
+                                        <div id="DetailReport" style="width: 100%;"></div>
+
+                                        <div class="body table-responsive">
+                                            <h4 id="tablehead">SIMPLIFICATION ITEMS AFFECTING CUSTOM CODE</h4>
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr class="success">
+                                                        <th>SAP Note Number</th>
+                                                        <th>Custom Code Topic</th>
+                                                        <th>Estimated Impact</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            144081
+
+                                                        </td>
+                                                        <td>
+                                                            Replacing MR01/functions of MR1M (Release
+                                                            4.6)
+                                                        </td>
+                                                        <td>Low</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1804812</td>
+                                                        <td>
+                                                            MB transactions: Limited
+                                                            maintenance/decommissioning
+                                                        </td>
+                                                        <td>MB transactions: Limited	Low</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1976487</td>
+                                                        <td>
+                                                            Information about adjusting customer-specific
+                                                            programs to the simplified data model in SAP
+                                                            Simple Finance
+                                                        </td>
+                                                        <td>Medium</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2198031</td>
+                                                        <td>
+                                                            S4TC EA-GLTRADE - DB Field Changes
+                                                            within Global Trade Management
+                                                        </td>
+                                                        <td>Low</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2198035</td>
+                                                        <td>
+                                                            S4TC EA-GLTRADE - Checks for Condition
+                                                            Contract DB Key Field Changes
+                                                        </td>
+                                                        <td>Low</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            2198647
+
+                                                        </td>
+                                                        <td>S/4 HANA: Data Model Changes in SD</td>
+                                                        <td>Medium</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            2206980
+
+                                                        </td>
+                                                        <td>
+                                                            Material Inventory Managment: change of
+                                                            data model in S/4HANA
+                                                        </td>
+                                                        <td>High</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2209696</td>
+                                                        <td>ATP Transition to S/4</td>
+                                                        <td>Low</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2214585</td>
+                                                        <td>Sales support not available</td>
+                                                        <td>Low</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2215424</td>
+                                                        <td>
+                                                            Material Number Field Length Extension -
+                                                            General Information
+                                                        </td>
+                                                        <td>Medium</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2217124</td>
+                                                        <td>
+                                                            S/4 HANA: Credit Management Changes in
+                                                            SD
+                                                        </td>
+                                                        <td>Low</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2220005</td>
+                                                        <td>
+                                                            S/4 HANA: Data Model Changes in Pricing
+                                                            and Condition Technique
+                                                        </td>
+                                                        <td>Medium</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2223144</td>
+                                                        <td>S/4 HANA - Foreign Trade in SD/MM</td>
+                                                        <td>Low</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2226129</td>
+                                                        <td>
+                                                            SAP S/4 HANA Simplification Item: Change of
+                                                            Data Structures in Budget Control System
+                                                        </td>
+                                                        <td>Low</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2226131</td>
+                                                        <td>
+                                                            SAP S/4 HANA Simplification Item: Public
+                                                            Sector specific fields in Business Partner
+                                                        </td>
+                                                        <td>Low</td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+
+                                    </div>
+                                    <hr />
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Jquery Core Js -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="../../plugins/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Select Plugin Js -->
+    <script src="../../plugins/bootstrap-select/js/bootstrap-select.js"></script>
+
+    <!-- Slimscroll Plugin Js -->
+    <script src="../../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="../../plugins/node-waves/waves.js"></script>
+
+    <!-- Dropzone Plugin Js -->
+    <script src="../../plugins/dropzone/dropzone.js"></script>
+
+    <!-- Custom Js -->
+
+    <script src="../../js/admin.js"></script>
+    <script src="../../js/pages/forms/advanced-form-elements.js"></script>
+
+    <!-- Demo Js -->
+    <script src="../../js/demo.js"></script>
+
+    <!--Morris Donut Chart-->
+    <!-- Morris Plugin Js -->
+    <script src="../../plugins/raphael/raphael.min.js"></script>
+    <script src="../../plugins/morrisjs/morris.js"></script>
+
+    <!-- Custom Js -->
+    <script src="../../js/admin.js"></script>
+    <script src="../../js/pages/charts/morris.js"></script>
+
+    <script>
+        function myFunction() {
+            location.href = "http://localhost:52105/ReadinessCheck.html";
+        }
+    </script>
+</body>
+
+</html>
